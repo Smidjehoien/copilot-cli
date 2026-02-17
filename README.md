@@ -94,6 +94,20 @@ For example, to install version `v0.0.369` to a custom directory:
 curl -fsSL https://gh.io/copilot-install | VERSION="v0.0.369" PREFIX="$HOME/custom" bash
 ```
 
+The install script also supports optional network tuning variables for constrained or proxied environments:
+
+- `CURL_RETRY` (default: `3`)
+- `CURL_CONNECT_TIMEOUT` in seconds (default: `10`)
+- `CURL_MAX_TIME` in seconds (default: `300`)
+- `WGET_TRIES` (default: `3`)
+- `WGET_TIMEOUT` in seconds (default: `30`)
+
+Example:
+
+```bash
+curl -fsSL https://gh.io/copilot-install | CURL_RETRY=5 CURL_MAX_TIME=600 bash
+```
+
 ### Launching the CLI
 
 ```bash
@@ -122,6 +136,17 @@ By default, `copilot` utilizes Claude Sonnet 4.5. Run the `/model` slash command
 Each time you submit a prompt to GitHub Copilot CLI, your monthly quota of premium requests is reduced by one. For information about premium requests, see [About premium requests](https://docs.github.com/copilot/managing-copilot/monitoring-usage-and-entitlements/about-premium-requests).
 
 For more information about how to use the GitHub Copilot CLI, see [our official documentation](https://docs.github.com/copilot/concepts/agents/about-copilot-cli).
+
+## 🛠️ Install Script Troubleshooting
+
+- **Unsupported operating system**: the script supports Linux and macOS tarball installs; Windows users should prefer WinGet.
+- **Windows shell without `winget`** (`MSYS`, `MINGW`, `CYGWIN`): install WinGet first or use another supported installation method.
+- **Permission denied while writing install path**: retry with `sudo` or set `PREFIX` to a writable location like `$HOME/.local`.
+- **Binary installed but command not found**: add `PREFIX/bin` to your `PATH` and restart your shell.
+
+## 🧾 Custom Attribution Notice
+
+This repository may include local custom artifacts with explicit originator attribution metadata. See [`CUSTOM_ATTRIBUTION_NOTICE.md`](./CUSTOM_ATTRIBUTION_NOTICE.md) for details.
 
 ## 📢 Feedback and Participation
 
