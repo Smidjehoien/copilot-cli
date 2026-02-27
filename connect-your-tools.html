@@ -6,41 +6,42 @@
     <title>Connect your tools</title>
     <style>
       :root {
-        --bg-start: #6e4ad8;
-        --bg-mid: #9f53b1;
-        --bg-end: #ea6a6f;
+        --bg-start: #6445db;
+        --bg-mid: #9b53b5;
+        --bg-end: #ea6f73;
         --icon-bg: #ececec;
-        --icon-accent: #b5569d;
+        --icon-accent: #b4579f;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html,
+      body {
+        height: 100%;
+      }
+
       body {
         margin: 0;
-        min-height: 100vh;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 52%, var(--bg-end) 100%);
+        background: linear-gradient(125deg, var(--bg-start) 4%, var(--bg-mid) 52%, var(--bg-end) 96%);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       }
 
       .logos {
         display: flex;
         align-items: center;
-        gap: 84px;
+        gap: clamp(26px, 5vw, 86px);
       }
 
       .logo {
-        width: 220px;
-        height: 220px;
+        width: clamp(120px, 11vw, 220px);
+        aspect-ratio: 1;
         border-radius: 50%;
         background: var(--icon-bg);
         position: relative;
-      }
-
-      .logo.linear {
         overflow: hidden;
       }
 
@@ -50,16 +51,18 @@
         inset: 0;
         border-radius: 50%;
         background:
-          linear-gradient(45deg,
-            transparent 45%,
-            var(--icon-accent) 45% 50%,
-            transparent 50% 56%,
-            var(--icon-accent) 56% 61%,
-            transparent 61% 67%,
-            var(--icon-accent) 67% 72%,
-            transparent 72% 78%,
-            var(--icon-accent) 78% 84%,
-            transparent 84%);
+          linear-gradient(
+            45deg,
+            transparent 38%,
+            var(--icon-accent) 38% 44%,
+            transparent 44% 52%,
+            var(--icon-accent) 52% 58%,
+            transparent 58% 66%,
+            var(--icon-accent) 66% 72%,
+            transparent 72% 80%,
+            var(--icon-accent) 80% 86%,
+            transparent 86%
+          );
       }
 
       .logo.plus::before,
@@ -68,32 +71,15 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 100px;
-        height: 22px;
-        border-radius: 11px;
+        width: clamp(50px, 5vw, 100px);
+        height: clamp(12px, 1.1vw, 22px);
+        border-radius: 999px;
         background: var(--icon-accent);
         transform: translate(-50%, -50%);
       }
 
       .logo.plus::after {
         transform: translate(-50%, -50%) rotate(90deg);
-      }
-
-      @media (max-width: 800px) {
-        .logos {
-          gap: 40px;
-        }
-
-        .logo {
-          width: 160px;
-          height: 160px;
-        }
-
-        .logo.plus::before,
-        .logo.plus::after {
-          width: 72px;
-          height: 16px;
-        }
       }
     </style>
   </head>
