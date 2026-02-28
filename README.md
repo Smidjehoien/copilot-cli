@@ -123,6 +123,10 @@ Each time you submit a prompt to GitHub Copilot CLI, your monthly quota of premi
 
 For more information about how to use the GitHub Copilot CLI, see [our official documentation](https://docs.github.com/copilot/concepts/agents/about-copilot-cli).
 
+## 🔌 Connect your tools mock
+
+For the Linear WWW-3 visual, open `connect-your-tools.html` in a browser to see the recreated "Connect your tools" gradient + icon composition.
+
 ## 📢 Feedback and Participation
 
 We're excited to have you join us early in the Copilot CLI journey.
