@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add LIN-1 test follow-up note to complete Linear smoke test workflow
+
 ## 0.0.369 - 2025-12-11
 
 - Add support for GPT-5.2
