@@ -6,11 +6,11 @@
     <title>Connect your tools</title>
     <style>
       :root {
-        --bg-start: #6445db;
-        --bg-mid: #9b53b5;
-        --bg-end: #ea6f73;
-        --icon-bg: #ececec;
-        --icon-accent: #b4579f;
+        --bg-start: #6544dc;
+        --bg-mid: #9a54b5;
+        --bg-end: #ec6d74;
+        --icon-bg: #eeeeef;
+        --icon-accent: #b3579f;
       }
 
       * {
@@ -26,18 +26,19 @@
         margin: 0;
         display: grid;
         place-items: center;
-        background: linear-gradient(125deg, var(--bg-start) 4%, var(--bg-mid) 52%, var(--bg-end) 96%);
+        background: linear-gradient(125deg, var(--bg-start) 2%, var(--bg-mid) 51%, var(--bg-end) 98%);
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       }
 
       .logos {
         display: flex;
         align-items: center;
-        gap: clamp(26px, 5vw, 86px);
+        gap: clamp(38px, 5vw, 84px);
+        transform: translateY(5vh);
       }
 
       .logo {
-        width: clamp(120px, 11vw, 220px);
+        width: clamp(108px, 11vw, 168px);
         aspect-ratio: 1;
         border-radius: 50%;
         background: var(--icon-bg);
@@ -54,14 +55,14 @@
           linear-gradient(
             45deg,
             transparent 38%,
-            var(--icon-accent) 38% 44%,
-            transparent 44% 52%,
-            var(--icon-accent) 52% 58%,
-            transparent 58% 66%,
-            var(--icon-accent) 66% 72%,
-            transparent 72% 80%,
-            var(--icon-accent) 80% 86%,
-            transparent 86%
+            var(--icon-accent) 38% 43.4%,
+            transparent 43.4% 51.6%,
+            var(--icon-accent) 51.6% 57%,
+            transparent 57% 65.2%,
+            var(--icon-accent) 65.2% 70.6%,
+            transparent 70.6% 78.8%,
+            var(--icon-accent) 78.8% 84.2%,
+            transparent 84.2%
           );
       }
 
@@ -71,8 +72,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: clamp(50px, 5vw, 100px);
-        height: clamp(12px, 1.1vw, 22px);
+        width: clamp(42px, 4vw, 70px);
+        height: clamp(11px, 0.95vw, 16px);
         border-radius: 999px;
         background: var(--icon-accent);
         transform: translate(-50%, -50%);
@@ -80,6 +81,13 @@
 
       .logo.plus::after {
         transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      @media (max-width: 700px) {
+        .logos {
+          gap: clamp(16px, 6vw, 36px);
+          transform: translateY(3vh);
+        }
       }
     </style>
   </head>
